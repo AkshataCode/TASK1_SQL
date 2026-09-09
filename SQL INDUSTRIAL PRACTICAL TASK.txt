@@ -1,0 +1,126 @@
+SQL INDUSTRIAL PRACTICAL TASK
+Employee Management System - DDL + Basic DML
+60 Small Practical Tasks - Basic to Intermediate
+
+
+                      Tasks Queries
+
+1.  CREATE DATABASE company_db;
+
+2. USE company_db;
+
+3.    CREATE TABLE employees (employee_id INT PRIMARY KEY, employee_name VARCHAR(100), department VARCHAR(50), salary DECIMAL(10,2),  city VARCHAR(50), joining_date DATE,  status VARCHAR(20);
+
+4.  DESCRIBE employees;
+
+5. SHOW TABLES;
+
+6. INSERT INTO employees VALUES (101, 'Rahul Patil', 'Development', 45000, 'Pune', '2026-01-10', 'Active');
+
+7. INSERT INTO employees VALUES (102, 'Priya Sharma', 'Testing', 38000, 'Mumbai', '2026-02-15', 'Active');
+
+8. INSERT INTO employees VALUES (103, 'Amit Joshi', 'Development', 52000, 'Pune', '2025-12-05', 'Active');
+
+9. INSERT INTO employees VALUES (104, 'Sneha Kulkarni', 'HR', 35000, 'Nashik', '2026-03-20', 'Active');
+
+10. INSERT INTO employees VALUES (105, 'Rohan Deshmukh', 'Support', 30000, 'Mumbai', '2026-04-01', 'Inactive');
+
+11. INSERT INTO employees VALUES (106, 'Anjali More', 'Testing', 42000, 'Pune', '2026-05-12', 'Active');
+
+12. SELECT * FROM employees;
+
+13. SELECT employee_name FROM employees;
+
+14. SELECT employee_name, salary FROM employees;
+
+15. SELECT employee_name, department, city FROM employees;
+
+16. SELECT * FROM employees WHERE city = 'Pune';
+
+17. SELECT * FROM employees WHERE city = 'Mumbai';
+
+18. SELECT * FROM employees WHERE department = 'Development';
+
+19. SELECT * FROM employees WHERE department = 'Testing';
+
+20. SELECT * FROM employees WHERE status = 'Active';
+
+21. SELECT * FROM employees WHERE status = 'Inactive';
+
+22. SELECT * FROM employees WHERE employee_id = 103;
+
+23. SELECT * FROM employees WHERE employee_name = 'Priya Sharma';
+
+24.SELECT * FROM employees WHERE salary > 40000;
+
+25. SELECT * FROM employees WHERE salary < 40000;
+
+26. SELECT * FROM employees WHERE salary = 35000;
+
+27. SELECT * FROM employees WHERE salary >= 42000;
+
+28. SELECT * FROM employees WHERE city = 'Pune' AND status = 'Active';
+
+29. SELECT * FROM employees WHERE department = 'Development' AND salary > 45000;
+
+30. SELECT * FROM employees WHERE city = 'Pune' OR city = 'Mumbai';
+
+31. UPDATE employees SET salary = 48000 WHERE employee_name = 'Rahul Patil';
+
+32. UPDATE employees SET status = 'Active' WHERE employee_name = 'Rohan Deshmukh';
+
+33. UPDATE employees SET city = 'Pune' WHERE employee_name = 'Sneha Kulkarni';
+
+34. UPDATE employees SET department = 'Development' WHERE employee_name = 'Priya Sharma';
+
+35. UPDATE employees SET salary = 45000 WHERE employee_id = 106;
+
+36. UPDATE employees SET salary = salary + 3000 WHERE employee_id = 103;
+
+37. UPDATE employees SET salary = salary + 2000 WHERE department = 'Testing';
+
+38. UPDATE employees SET city = 'Mumbai Branch' WHERE city = 'Mumbai';
+
+39. DELETE FROM employees WHERE employee_id = 105;
+
+40. DELETE FROM employees WHERE employee_name = 'Rohan Deshmukh';
+
+41. DELETE FROM employees WHERE status = 'Inactive';
+
+42. DELETE FROM employees WHERE salary < 30000;
+
+43. DELETE FROM employees WHERE employee_id = 104;
+
+44. ALTER TABLE employees ADD COLUMN email VARCHAR(100);
+
+45. ALTER TABLE employees ADD COLUMN mobile VARCHAR(15);
+
+46. ALTER TABLE employees MODIFY COLUMN city VARCHAR(100);
+
+47. ALTER TABLE employees RENAME COLUMN employee_name TO name;
+
+48. ALTER TABLE employees DROP COLUMN mobile;
+
+49. ALTER TABLE employees ADD COLUMN experience INT;
+
+50. UPDATE employees SET experience = 3 WHERE employee_id = 101;
+
+51. CREATE TABLE departments (department_id INT PRIMARY KEY, department_name VARCHAR(100), location VARCHAR(100));
+
+52. INSERT INTO departments VALUES (1, 'HR', 'Pune'), (2, 'Development', 'Mumbai'), (3, 'Testing', 'Nashik');
+
+53. SELECT * FROM departments;
+
+54. UPDATE departments SET location = 'Pune Branch' WHERE department_id = 1;
+
+55. DELETE FROM departments WHERE department_id = 3;
+
+56. RENAME TABLE departments TO company_departments;
+
+57. DESCRIBE company_departments;
+
+58. TRUNCATE TABLE company_departments;
+
+59. DROP TABLE company_departments;
+
+60. SHOW TABLES;
